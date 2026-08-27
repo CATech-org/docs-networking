@@ -7,7 +7,7 @@ A USB WiFi adapter can silently go to sleep after a period of inactivity, killin
 ## Symptom
 
 - WiFi connection drops after roughly 30 minutes of use, with no obvious trigger.
-- If the machine is remote-accessed over a VPN (e.g. WireGuard, see [1-wireguard-vpn-setup.md](1-wireguard-vpn-setup.md)), the VPN tunnel goes down with it. The machine becomes unreachable from outside, not just off the VPN.
+- If the machine is remote-accessed over ka VPN (e.g. WireGuard, see [1-wireguard-vpn-setup.md](1-wireguard-vpn-setup.md)), the VPN tunnel goes down with it. The machine becomes unreachable from outside, not just off the VPN.
 - Reconnecting WiFi manually (or a reboot) restores the connection, only for it to drop again after a similar interval.
 
 > [!important] This looks like a driver bug, a router issue, or a flaky adapter, but none of these is the cause. The actual cause is a power-management feature silently suspending the USB device the WiFi adapter is connected through. It is easy to chase the wrong fix (driver reinstalls, router settings) before finding this.
